@@ -1,28 +1,17 @@
 package me.madcabbage.aoc;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 //How many passwords are valid according to their policies?
-public class Day2 {
+public class Day2 extends AocDay {
 
-    public static void main(String[] args) throws FileNotFoundException {
-        Day2 d2 = new Day2();
-        String[] input = d2.getInput();
-        d2.part1(input);
-
-        d2.part2(input);
+    public Day2() {
+        super("Day2", "C:\\Users\\MadCabbage\\IdeaProjects\\advent-of-code-2020\\resources\\day2.input");
     }
 
-    private void part1(String[] input) {
-        Messages.printStartMsg("Part one");
-        long start = System.currentTimeMillis();
-
+    public void part1() {
         int total = 0;
         int valid = 0;
 
-        for (String policy : input) {
+        for (String policy : stringInput) {
             total++;
             String[] splitPolicy = policy.split(" ");
             String[] bounds = splitPolicy[0].split("-");
@@ -41,20 +30,14 @@ public class Day2 {
             }
         }
 
-        long end = System.currentTimeMillis();
-        System.out.println(valid + " passwords out of " + total + " are valid");
-        Messages.printRunTime(start, end, "Part one");
-
+        System.out.println("\t" + valid + " passwords out of " + total + " are valid");
     }
 
-    private void part2(String[] input) {
-        Messages.printStartMsg("Part two");
-        long start = System.currentTimeMillis();
-
+    public void part2() {
         int total = 0;
         int valid = 0;
 
-        for (String policy : input) {
+        for (String policy : stringInput) {
             total++;
             String[] splitPolicy = policy.split(" ");
             String[] bounds = splitPolicy[0].split("-");
@@ -74,30 +57,6 @@ public class Day2 {
             }
         }
 
-        long end = System.currentTimeMillis();
-        System.out.println(valid + " passwords out of " + total + " are valid");
-        Messages.printRunTime(start, end, "Part one");
-    }
-
-    private String[] getInput() throws FileNotFoundException {
-        Messages.printStartMsg("Passwords file read");
-        long start = System.currentTimeMillis();
-
-        File input = new File("C:\\Users\\MadCabbage\\IdeaProjects\\Advent of code\\resources\\day2.input");
-        Scanner scan = new Scanner(input);
-        String[] pws = new String[1000];
-
-        int lines = 0;
-        int i = 0;
-        while(scan.hasNextLine()) {
-            pws[i] = scan.nextLine();
-            lines++;
-            i++;
-        }
-        long end = System.currentTimeMillis();
-        scan.close();
-        System.out.println(lines + " Lines read");
-        Messages.printRunTime(start, end, "Reading passwords file");
-        return pws;
+        System.out.println("\t" + valid + " passwords out of " + total + " are valid");
     }
 }
