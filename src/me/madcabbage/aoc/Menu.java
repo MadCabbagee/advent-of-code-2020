@@ -34,8 +34,7 @@ public class Menu {
                     try {
                         option.getDay().run();
                     } catch (FileNotFoundException e) {
-                        System.out.println("The input file for this day could not be found.");
-                        e.printStackTrace();
+                        System.out.println("The input file for this day could not be found. Please make another selection.\n");
                     }
                 }
             }
@@ -53,7 +52,7 @@ public class Menu {
     }
 
     private void showMenu() {
-        System.out.println("Please make a selection from the menu below;");
+        System.out.println("Please make a selection from the menu below:");
         for (MenuItem item : options) {
             System.out.println("\t" + item);
         }
