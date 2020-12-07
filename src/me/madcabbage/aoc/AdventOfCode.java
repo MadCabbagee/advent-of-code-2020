@@ -14,7 +14,8 @@ public class AdventOfCode {
         return new AocDay[] {
                 new Day1(),
                 new Day2(),
-                new Day3()
+                new Day3(),
+                new Day4()
         };
     }
 }

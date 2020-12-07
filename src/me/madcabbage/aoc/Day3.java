@@ -13,11 +13,12 @@ public class Day3 extends AocDay {
 
     @Override
     public void part2() {
-        System.out.println("\tTrees encountered: " + getTrees(1,1));
-        System.out.println("\tTrees encountered: " + getTrees(3,1));
-        System.out.println("\tTrees encountered: " + getTrees(5,1));
-        System.out.println("\tTrees encountered: " + getTrees(7,1));
-        System.out.println("\tTrees encountered: " + getTrees(1,2));
+        System.out.println("\t" +
+                (long) getTrees(1, 1) *
+                getTrees(3, 1) *
+                getTrees(5, 1) *
+                getTrees(7, 1) *
+                getTrees(1, 2) );
     }
 
     private int getTrees(int right, int down) {
