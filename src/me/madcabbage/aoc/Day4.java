@@ -2,8 +2,8 @@ package me.madcabbage.aoc;
 
 public class Day4 extends AocDay {
 
-    public Day4() {
-        super("Day4", "C:\\Users\\MadCabbage\\IdeaProjects\\advent-of-code-2020\\resources\\day4.input");
+    public Day4(String inputPath) {
+        super("Day4", inputPath);
     }
 
     @Override

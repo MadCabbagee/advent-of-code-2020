@@ -2,8 +2,8 @@ package me.madcabbage.aoc;
 
 public class Day1 extends AocDay {
 
-    public Day1() {
-        super("Day1", "C:\\Users\\MadCabbage\\IdeaProjects\\advent-of-code-2020\\resources\\day1.input");
+    public Day1(String inputPath) {
+        super("Day1", inputPath);
     }
 
     // find 2 numbers from the expenses file that add up to 2020 and print the product

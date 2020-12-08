@@ -3,8 +3,8 @@ package me.madcabbage.aoc;
 //How many passwords are valid according to their policies?
 public class Day2 extends AocDay {
 
-    public Day2() {
-        super("Day2", "C:\\Users\\MadCabbage\\IdeaProjects\\advent-of-code-2020\\resources\\day2.input");
+    public Day2(String inputPath) {
+        super("Day2", inputPath);
     }
 
     public void part1() {
